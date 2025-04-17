@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人生規劃步驟</title>
+  <style>
+   body {
+      font-family: "Helvetica", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #1a1a1a, #333);
+      overflow-x: hidden;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #f48fb1;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid #f7b6c2;
+    }
+
+    .step h2 {
+      color: #33a1cc;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .image {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .image img {
+      width: 40%;
+      border-radius: 12px;
+      border: 3px solid #f7b6c2;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 櫻花樣式 */
+    .sakura {
+      position: fixed;
+      top: -50px;
+      pointer-events: none;
+      z-index: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://i.imgur.com/nXb8Qzv.png');
+      background-size: cover;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>我的人生規劃步驟</h1>
+    <p><h2>Live in the present</h2></p>
+    <p>羅一程 5B3G0021</p>
+  </header>
+
+  <div class="container">
+    <div class="step">
+      <h2>Step 1：自我探索和評估</h2>
+      <ul>
+        <li><h3>了解興趣和價值觀：思考自己喜歡做什麼，做什麼事情會充滿熱忱及成就感，以及什麼是你重視的價值觀和未來理想的生活。</li></h3>
+        <li><h3>評估技能和能力：評估自己的技術和處事能力，包括學業技能、溝通能力、領導能力等。</li></h3>
+        <li><h3>設定職業目標：明確設定中、長期的職業目標，釐清自己在未來工作規劃中希望達到的階段性成果。</li></h3>
+      </ul>
+      <div class="image">
+        <img src="code-1.jpg" alt="自我探索圖片">
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Step 2：資訊蒐集與研究</h2>
+      <ul>
+        <li><h3>研究不同的職業和產業：看看哪些產業和工作內容與自己相符，並了解相關產業的需求、技能要求、發展前景。</li></h3>
+        <li><h3>請教專業人士：與從事你感興趣職業的人對談，了解實際工作內容與進入職場所需條件。</li></h3>
+        <li><h3>關注趨勢與發展：透過網路或報導掌握該領域的發展動向，選擇具未來潛力的工作方向。</li></h3>
+      </ul>
+      <div class="image">
+        <img src="HTML、CSS、JavaScript.jpg" alt="資訊蒐集圖片">
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Step 3：制定計畫</h2>
+      <ul>
+        <li><h3>設定具體的目標：確認長短期目標，明確標記何時要完成什麼。</li></h3>
+        <li><h3>制定行動計畫：列出學習技能、實習經驗、參與活動等必要步驟。</li></h3>
+        <li><h3>設定彈性和調整：給自己一點時間和空間，不斷修正及調整。</li></h3>
+      </ul>
+      <div class="image">
+        <img src="comp.jpg" alt="行動計畫圖片">
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Step 4：落實行動</h2>
+      <ul>
+        <li><h3>持續行動與反思：不斷實踐計畫內容，並依據成效進行調整。</li></h3>
+        <li><h3>時間管理：多學習、實習，培養基礎能力。</li></h3>
+        <li><h3>尋求支持與鼓勵：向家人、老師或朋友請教，獲得回饋與支持。</li></h3>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // 櫻花生成函數
+    function createSakura() {
+        const sakura = document.createElement('div');
+        sakura.className = 'sakura';
+        sakura.innerHTML = ' 🌸 '; // 櫻花符號
+        sakura.style.left = Math.random() * 100 + 'vw'; // 隨機水平位置
+        sakura.style.fontSize = Math.random() * 1.5 + 0.5 + 'em'; // 隨機大小
+        sakura.style.opacity = Math.random() * 0.5 + 0.5; // 隨機透明度
+    
+        // 設置隨機下落時間（減少時間以加速）
+        const fallDuration = Math.random() * 4 + 2; // 2 到 6 秒之間
+        sakura.style.animation = `fall ${fallDuration}s linear infinite, sway 3s infinite ease-in-out`;
+    
+        document.body.appendChild(sakura);
+    
+        // 移除櫻花
+        sakura.addEventListener('animationend', () => {
+            sakura.remove();
+        });
+    }
+    
+    // 每隔一段時間生成櫻花
+    setInterval(createSakura, 1200); // 每 500 毫秒生成一片櫻花
+</script>
+   
+ </script>
+</body>
+</html>
